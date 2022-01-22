@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_departments</id>
+    <version>1.0</version>
+    <priority>6000</priority>
+    <position>200</position>
+    <status>disabled</status>
+    <default_language>en</default_language>
+    <has_icon>Y</has_icon>
+    <authors>
+        <author>
+            <name>Simtech-School</name>
+            <email>school@simtech.ru</email>
+            <url>http://simtech.ru</url>
+        </author>
+    </authors>
+    <queries>
+        <item for="install" >
+            CREATE TABLE `?:departments`(
+            department_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
+            status VARCHAR(1) NOT NULL DEFAULT 'A',
+            timestamp INT(11) unsigned NOT NULL DEFAULT '0',
+            upd_timestamp INT(11) unsigned NOT NULL DEFAULT '0',
+            lead_user_id INT(11) unsigned NOT NULL DEFAULT '0',
+            KEY (lead_user_id),
+            PRIMARY KEY (department_id)
+            ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+        </item>
+        <item for="uninstall">
+            DROP TABLE `?:departments`;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:departments_descriptions`(
+            department_id INT(11) unsigned NOT NULL,
+            lang_code VARCHAR(2) NOT NULL DEFAULT '',
+            department VARCHAR(255) NOT NULL DEFAULT '',
+            description text NULL,
+            PRIMARY KEY (department_id, lang_code)
+            ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+        </item>
+        <item for="uninstall">
+            DROP TABLE `?:departments_descriptions`;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:departments_links`(
+            department_id INT(11) unsigned NOT NULL,
+            worker_id INT(11) unsigned NOT NULL,
+            KEY (department_id),
+            KEY (worker_id),
+            PRIMARY KEY (department_id, worker_id)
+            ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+        </item>
+        <item for="uninstall">
+            DROP TABLE `?:departments_links`;
+        </item>
+        </queries>
+</addon>
