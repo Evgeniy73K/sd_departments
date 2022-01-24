@@ -15,3 +15,38 @@ msgstr Добавляет возможность создания отделов
 msgctxt "SettingsSections::sd_departments::general"
 msgid "General"
 msgstr "General"
+
+msgctxt "Languages::departments"
+msgid "Departments"
+msgstr "Отделы"
+
+msgctxt "Languages::leader"
+msgid "leader"
+msgstr "Руководитель"
+
+msgctxt "Languages::add_leader"
+msgid "Add leader"
+msgstr "Добавить руководителя"
+
+msgctxt "Languages::workers"
+msgid "Workers"
+msgstr "Сотрудники"
+
+msgctxt "Languages::add_worker"
+msgid "Add worker"
+msgstr "Добавить сотрудника"
+
+msgctxt "Languages::add_department"
+msgid "Add department"
+msgstr "Добавить отдел"
+
+msgctxt "Languages::sd_departments.departments"
+msgid "SD departments"
+msgstr "SD отделы"
+
+
+
+
+
+
+
