@@ -9,10 +9,6 @@
 <form action="{""|fn_url}" method="post" class="form-horizontal form-edit" name="banners_form" enctype="multipart/form-data">
 <input type="hidden" class="cm-no-hide-input" name="fake" value="1" />
 <input type="hidden" class="cm-no-hide-input" name="department_id" value="{$id}" />
-
-
-
-
     <div id="content_general">
         <div class="control-group">
             <label for="elm_banner_name" class="control-label cm-required">{__("name")}</label>
@@ -21,8 +17,7 @@
             
         </div>
     </div>
-
-
+    
         <div class="control-group" id="banner_graphic">
             <label class="control-label">{__("image")}</label>
             <div class="controls">
@@ -85,15 +80,8 @@
                     }
                 </div>
             </div>
-            {include file="common/select_status.tpl" input_name="department_data[status]" id="elm_banner_status" obj_id=$id obj=$department_data hidden=false}
-
-
-    
-    <!--content_general--></div>
-
-
-
-
+            {include file="common/select_status.tpl" input_name="department_data[status]" id="elm_banner_status" obj_id=$id obj=$department_data hidden=false}    
+    </div>
 {capture name="buttons"}
     {if !$id}
         {include file="buttons/save_cancel.tpl" but_role="submit-link" but_target_form="banners_form" but_name="dispatch[departments.update_department]"}
@@ -116,4 +104,3 @@
     buttons=$smarty.capture.buttons
     select_languages=true}
 
-{** banner section **}

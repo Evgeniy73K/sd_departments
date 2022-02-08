@@ -3,6 +3,7 @@ use Tygh\Registry;
 use Tygh\BlockManager\ProductTabs;
 
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
+
 if ($mode === 'departments') {
     Tygh::$app['session']['continue_url'] = "departments.departments";
 
@@ -20,6 +21,7 @@ if ($mode === 'departments') {
     $department_data = [];
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
     $department_data = fn_get_department_data($department_id, CART_LANGUAGE);
+    
     if (empty($department_data)) {
         return [CONTROLLER_STATUS_NO_PAGE];
     }

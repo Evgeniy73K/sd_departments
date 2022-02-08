@@ -35,8 +35,6 @@
                 <th>
                 </th>
                 <th><a class="cm-ajax" href="{"`$c_url`&sort_by=name&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>{__("name")}{if $search.sort_by === "name"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
-
-
                 <th width="6%" class="mobile-hide">&nbsp;</th>
                 <th width="10%" class="right"><a class="cm-ajax" href="{"`$c_url`&sort_by=status&sort_order=`$search.sort_order_rev`"|fn_url}" data-ca-target-id={$rev}>{__("status")}{if $search.sort_by === "status"}{$c_icon nofilter}{else}{$c_dummy nofilter}{/if}</a></th>
             </tr>
@@ -63,7 +61,6 @@
                 <td width="6%" class="left mobile-hide">
                     <input type="checkbox" name="department_ids[]" value="{$department.department_id}" class="cm-item {$no_hide_input} cm-item-status-{$department.status|lower} hide" /></td>
                 <td class="{$no_hide_input}" data-th="{__("name")}">
-
                     <a class="row-status" href="{"departments.update_department?department_id=`$department.department_id`"|fn_url}">{$department.department}</a>
                 </td>
 
@@ -99,14 +96,11 @@
 
 {include file="common/pagination.tpl" div_id="pagination_contents_departments"}
 
-
-    
 {capture name="adv_buttons"}     
     {include file="common/tools.tpl" tool_href="departments.add_department" prefix="top" hide_tools="true" title="Добавить отдел" icon="icon-plus"}
 {/capture}
 </form>
 {/capture}
-
 
 {hook name="departments:manage_mainbox_params"}
     {$page_title = __("departments")}
@@ -119,4 +113,3 @@
 
 {include file="common/mainbox.tpl" title=$page_title content=$smarty.capture.mainbox adv_buttons=$smarty.capture.adv_buttons select_languages=$select_languages sidebar=$smarty.capture.sidebar}
 
-{** ad section **}
