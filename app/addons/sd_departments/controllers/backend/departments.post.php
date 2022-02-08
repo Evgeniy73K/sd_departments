@@ -3,6 +3,7 @@ use Tygh\Registry;
 use Tygh\Enum\UsergroupTypes;
 use Tygh\Languages\Helper as LanguageHelper;
 use Tygh\Languages\Languages;
+
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $suffix = '';

@@ -4,10 +4,6 @@ use Tygh\Enum\NotificationSeverity;
 use Tygh\Enum\ObjectStatuses;
 use Tygh\Enum\ProfileDataTypes;
 use Tygh\Enum\ProfileFieldLocations;
-use Tygh\Enum\ProfileFieldSections;
-use Tygh\Enum\ProfileFieldTypes;
-use Tygh\Enum\ProfileTypes;
-use Tygh\Enum\SiteArea;
 use Tygh\Enum\UsergroupLinkStatuses;
 use Tygh\Enum\UsergroupStatuses;
 use Tygh\Enum\UsergroupTypes;
@@ -24,9 +20,9 @@ use Tygh\Tools\SecurityHelper;
 use Tygh\Tools\Url;
 
 defined('BOOTSTRAP') or die('Access denied');
-function fn_get_departments ($params = array(), $items_per_page, $lang_code = CART_LANGUAGE)
+
+function fn_get_departments($params = array(), $items_per_page, $lang_code = CART_LANGUAGE)
 {
-    // Set default values to input params
     $default_params = array(
         'page' => 1,
         'items_per_page' => 3

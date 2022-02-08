@@ -4,8 +4,6 @@
     {assign var="id" value=0}
 {/if}
 
-
-
 {capture name="mainbox"}
 
 <form action="{""|fn_url}" method="post" class="form-horizontal form-edit" name="banners_form" enctype="multipart/form-data">

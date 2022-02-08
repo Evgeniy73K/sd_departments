@@ -12,6 +12,26 @@ msgctxt "Addons::description::sd_departments"
 msgid "Adds ability to create departments. Developed by Evgeniy Karabaev
 msgstr "Adds ability to create departments. Developed by Evgeniy Karabaev
 
-msgctxt "SettingsSections::cp_video_gallery::general"
-msgid "General"
-msgstr "General"
+msgctxt "Languages::leader"
+msgid "leader"
+msgstr "leader"
+
+msgctxt "Languages::add_leader"
+msgid "Add leader"
+msgstr "Add leader"
+
+msgctxt "Languages::workers"
+msgid "Workers"
+msgstr "Workers"
+
+msgctxt "Languages::add_worker"
+msgid "Add worker"
+msgstr "Add worker"
+
+msgctxt "Languages::add_department"
+msgid "Add department"
+msgstr "Add department"
+
+msgctxt "Languages::sd_departments.departments"
+msgid "SD departments"
+msgstr "SD departments"

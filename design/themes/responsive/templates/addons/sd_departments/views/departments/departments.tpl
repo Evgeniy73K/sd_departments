@@ -13,14 +13,8 @@
         {split data=$departments size=$columns|default:"2" assign="splitted_departments" skip_complete=true}
     {/if}
 
-    {math equation="100 / x" x=$columns|default:"2" assign="cell_width"}
-
-    {* FIXME: Don't move this file *}
-    {script src="js/tygh/product_image_gallery.js"}
-
     <div class="grid-list">
         {strip} 
-
 
                 {foreach from=$departments item="department" name="sdepartments"}
 

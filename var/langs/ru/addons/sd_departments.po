@@ -43,10 +43,3 @@ msgstr "Добавить отдел"
 msgctxt "Languages::sd_departments.departments"
 msgid "SD departments"
 msgstr "SD отделы"
-
-
-
-
-
-
-
