@@ -112,6 +112,10 @@
     {$page_title = __("departments")}
     {$select_languages = true}
 {/hook}
+{capture name="sidebar"}
+    {include file="common/saved_search.tpl" dispatch="departments.manage_departments" view_type="tags"}
+    {include file={include file="addons/sd_departments/views/departments/components/departments_search_form.tpl" dispatch="departments.manage_departments"} dispatch="departments.manage_departments"}
+{/capture}
 
 {include file="common/mainbox.tpl" title=$page_title content=$smarty.capture.mainbox adv_buttons=$smarty.capture.adv_buttons select_languages=$select_languages sidebar=$smarty.capture.sidebar}
 
