@@ -85,3 +85,5 @@ https://monosnap.com/direct/oqyeBmRGksjMzjl04LpvMtprVJHl8A
 3.Перейти на любой Отдел
 Ожидаемый результат:
 Открыта карточка отдела с лого, руководителем и сотрудниками
+
+Автотест находится в папке var/tools/FirstCest.php
