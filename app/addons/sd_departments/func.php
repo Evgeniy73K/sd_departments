@@ -50,6 +50,9 @@ function fn_get_departments($params = array(), $items_per_page, $lang_code = CAR
     if (!empty($params['status'])) {
         $condition .= db_quote(' AND ?:departments.status = ?s', $params['status']);
     }
+    if (!empty($params['departments'])) {
+        $condition .= db_quote(' AND ?:departments_descriptions.department = ?s', $params['departments']);
+    }
     $fields = array (
         '?:departments.department_id',
         '?:departments.status',
