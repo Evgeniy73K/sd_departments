@@ -4,7 +4,7 @@
     {capture name="simple_search"}
     <div class="sidebar-field">
         <label for="elm_tag">{__("departments")}</label>
-        <input type="text" id="elm_tag" name="tag" size="20" value="{$search.tag}" onfocus="this.select();" class="input-text" />
+        <input type="text" id="elm_tag" name="departments" size="20" value="{$search.departments}" onfocus="this.select();" class="input-text" />
     </div>
 
     <div class="sidebar-field">
@@ -16,7 +16,7 @@
         </select>
     </div>
     {/capture}
-    
+
     {include file="common/advanced_search.tpl" simple_search=$smarty.capture.simple_search advanced_search=$smarty.capture.advanced_search dispatch=$dispatch view_type="tags"}
 
     </form>

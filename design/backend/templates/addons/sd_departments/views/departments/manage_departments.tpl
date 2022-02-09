@@ -1,5 +1,3 @@
-{** departments section **}
-
 {capture name="mainbox"}
 
 <form action="{""|fn_url}" method="post" id="departments_form" name="departments_form" enctype="multipart/form-data">
@@ -100,6 +98,12 @@
     {include file="common/tools.tpl" tool_href="departments.add_department" prefix="top" hide_tools="true" title="Добавить отдел" icon="icon-plus"}
 {/capture}
 </form>
+{/capture}
+{capture name="sidebar"}
+    {hook name="banners:manage_sidebar"}
+    {include file="common/saved_search.tpl" dispatch="departments.manage_departments" view_type="departments"}
+    {include file="addons/sd_departments/views/departments/components/departments_search_form.tpl" dispatch="departments.manage_departments"}
+    {/hook}
 {/capture}
 
 {hook name="departments:manage_mainbox_params"}
