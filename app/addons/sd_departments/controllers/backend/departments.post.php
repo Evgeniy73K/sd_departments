@@ -20,6 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
         fn_delete_department($department_id);
         $suffix = ".manage_departments";
+    } elseif ($mode === 'delete_departments') {
+        foreach ($_REQUEST['department_ids'] as $v) {
+            fn_delete_department($v);
+        }
+
+        $suffix = ".manage_departments";
     } 
     return array(CONTROLLER_STATUS_OK, 'departments' . $suffix);
 }
