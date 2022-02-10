@@ -1,0 +1,59 @@
+
+{if $departments}
+
+    {script src="js/tygh/exceptions.js"}
+ 
+    {if !$no_pagination}
+        {include file="common/pagination.tpl"}
+    {/if}
+
+    {if !$show_empty}
+        {split data=$departments size=$columns|default:"2" assign="splitted_departments"}
+    {else}
+        {split data=$departments size=$columns|default:"2" assign="splitted_departments" skip_complete=true}
+    {/if}
+
+    <div class="grid-list">
+        {strip} 
+
+                {foreach from=$departments item="department" name="sdepartments"}
+
+                    <div class="ty-column{$columns}">
+                        {if $department}
+                         {foreach from=$departments.user_info item="user"}
+                                                        {$user.firstname}
+                                                    {/foreach}
+                            {assign var="obj_id" value=$department.department_id}
+                            {assign var="obj_id_prefix" value="`$obj_prefix``$department.department_id`"}
+                            
+                           
+                                        <div class="ty-grid-list__image">
+                                            <a href="{"departments.department?department_id={$department.department_id}"|fn_url}">
+                                            {include file="common/image.tpl" 
+                                            no_ids=true images=$department.main_pair 
+                                            image_width=$settings.Thumbnails.product_lists_thumbnail_width 
+                                            image_height=$settings.Thumbnails.product_lists_thumbnail_height 
+                                            lazy_load=true}
+                                            </a>
+                                        </div>
+            
+                                        <div class="ty-grid-list__item-name">
+                                            {__("leader")} {$department.user_info.firstname} {$department.user_info.lastname}           
+                                            <bdi>{$smarty.capture.$name nofilter}</bdi>
+                                        </div>
+                                        <div class="ty-grid-list__item-name">
+                                        <bdi>
+                                        <a href="{"departments.department?department_id={$department.department_id}"|fn_url}" class="product-title" title="{$department.department}">{$department.department}</a>    
+                                        </bdi>
+                                        </div>
+                            
+                        {/if}
+                    </div>
+            {/foreach}
+        {/strip}
+    </div>
+    {if !$no_pagination}
+        {include file="common/pagination.tpl"}
+    {/if}
+{/if}
+{capture name="mainbox_title"}{$title}{/capture}

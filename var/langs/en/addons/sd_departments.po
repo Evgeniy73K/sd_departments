@@ -1,0 +1,37 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "Addons::name::sd_departments"
+msgid "Departments"
+msgstr "Departments"
+
+msgctxt "Addons::description::sd_departments"
+msgid "Adds ability to create departments. Developed by Evgeniy Karabaev
+msgstr "Adds ability to create departments. Developed by Evgeniy Karabaev
+
+msgctxt "Languages::leader"
+msgid "leader"
+msgstr "leader"
+
+msgctxt "Languages::add_leader"
+msgid "Add leader"
+msgstr "Add leader"
+
+msgctxt "Languages::workers"
+msgid "Workers"
+msgstr "Workers"
+
+msgctxt "Languages::add_worker"
+msgid "Add worker"
+msgstr "Add worker"
+
+msgctxt "Languages::add_department"
+msgid "Add department"
+msgstr "Add department"
+
+msgctxt "Languages::sd_departments.departments"
+msgid "SD departments"
+msgstr "SD departments"
